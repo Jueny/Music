@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout layout;
     List<View> views=new ArrayList<>();
     int []imgIds=new int[]{
-            R.drawable.img1,R.drawable.img2,R.drawable.img3
+            R.drawable.loge1,R.drawable.loge2,R.drawable.loge3
     };
     ImageView[] dots=new ImageView[3];
     int curpage;//存放当前页（第几页

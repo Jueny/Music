@@ -50,7 +50,7 @@ public class ListFragment extends Fragment {
         super.onCreate(savedInstanceState);
 //        list=(ListView)view.findViewById(R.id.);
         for (int i=1;i<20;i++){
-            data.add("这是第"+i+"条新闻");
+            data.add("伶仃");
         }
         adapter=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,data);
     }
@@ -68,10 +68,36 @@ public class ListFragment extends Fragment {
 
                     Intent intent=new Intent(getActivity(), ContentActivity.class);//跳转到ContentActivity
                     intent.putExtra("title",data.get(position));
-                    intent.putExtra("content","其一、日本变成了“局外人”，丧失了发言权，美国却没有关照日本的利益，也拒绝采纳日本的建议。\n" +
-                            "\n" +
-                            "根据媒体报道，白宫在5月13日大赞韩国北邻废弃核试验场的“壮举”。川普还声称准备了“弃核大礼包”。美国国务卿蓬佩奥在受访时也表示，如果能够就无核化达成协议，美国将提供安全承诺。他还声称“美国的利益是阻止该国向西海岸的洛杉矶发射核武，终极目标是不再受该国的核武威胁。”连极端强硬的美国国家安全事务助理博尔顿都表示“只要实现彻底的、可查证的、不可逆转的弃核，前途将非常光明。”\n" +
-                            "\n");
+                    intent.putExtra("content","伶仃\n" +
+                            "词：田辰明\n" +
+                            "曲：霍尊\n" +
+                            "演唱：霍尊&张力尹\n" +
+                            "尊：\n" +
+                            "若非午夜梦里掠影\n" +
+                            "你正莞尔扑进怀里\n" +
+                            "我又怎会想起\n" +
+                            "我非生来伶仃\n" +
+                            "那年 那夜 多情\n" +
+                            "尹：\n" +
+                            "最后天各一方散尽\n" +
+                            "就当我是无情无心\n" +
+                            "光阴匆匆过去\n" +
+                            "再没有什么让我伤心\n" +
+                            "（男：我们）\n" +
+                            "也不再动心\n" +
+                            "合：\n" +
+                            "怀念那样沉默一个你 微笑 站在 那里\n" +
+                            "无论世事如何地更替 总是 如影 随形\n" +
+                            "那时我 从未想过\n" +
+                            "最后你我各伶仃\n" +
+                            "为何真心\n" +
+                            "于事无济\n" +
+                            "想问最后消失那个你 此刻 又在 哪里\n" +
+                            "可知我有平常的悲喜 应当 说给 谁听\n" +
+                            "这世界 依然美丽\n" +
+                            "人间繁花又开尽\n" +
+                            "但没有你\n" +
+                            "越美越是空虚\n" );
                 startActivity(intent);
 //                InputStream is = ().open(names[1]);
 //                int lenght = is.available();

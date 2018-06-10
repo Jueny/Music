@@ -35,16 +35,17 @@ public class LoadingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading);
-//        spf = PreferenceManager.getDefaultSharedPreferences(this);
-//        boolean isFirst=spf.getBoolean("isFirst",true);
-//        if (isFirst){
-//            SharedPreferences.Editor editor=spf.edit();
-//            editor.putBoolean("isFirst",false);
-//            editor.apply();
-//        }else{
-//            Intent intent=new Intent(LoadingActivity.this,MainActivity.class);
-//            startActivity(intent);
-//        }
+
+        spf = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean isFirst=spf.getBoolean("isFirst",true);
+        if (isFirst){
+            SharedPreferences.Editor editor=spf.edit();
+            editor.putBoolean("isFirst",false);
+            editor.apply();
+        }else{
+            Intent intent=new Intent(LoadingActivity.this,MainActivity.class);
+            startActivity(intent);
+        }
         initView();
         initData();
     }
