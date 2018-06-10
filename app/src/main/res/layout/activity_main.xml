@@ -18,18 +18,7 @@
         android:layout_marginBottom="320dp"
         android:layout_alignParentStart="true">
     </android.support.v4.view.ViewPager>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="150dp">
-<fragment
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:name="com.example.music.Fragment.ListFragment"
-    android:id="@+id/list_fragment">
 
-</fragment>
-</LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,6 +45,41 @@
             android:src="@drawable/dots"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="50dp">
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.music.Fragment.ListFragment"
+            android:id="@+id/list_fragment">
+
+        </fragment>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="430dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:text="首页"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_page"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="推荐"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recommend"
+            android:layout_weight="1" />
+    </LinearLayout>
 
 </RelativeLayout>
 

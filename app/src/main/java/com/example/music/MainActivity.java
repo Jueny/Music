@@ -1,12 +1,14 @@
 package com.example.music;
 
 import android.content.ContentResolver;
+import android.content.Intent;
 import android.database.Cursor;
 import android.provider.ContactsContract;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -27,9 +29,11 @@ public class MainActivity extends AppCompatActivity {
     };
     ImageView[] dots=new ImageView[3];
     int curpage;//存放当前页（第几页
+    Button recommend;
+//    View loge1,loge2,loge3;
 
+//    private ArrayList<Music> musicList=new ArrayList<Music>();
 
-    private ArrayList<Music> fruitList=new ArrayList<Music>();
 //    int [] imageIds=new int[]{};
 //    String[] MusicName=new String[]{"apple","banana","cherry","grape","mango",
 //            "orange", "pear", "pineapple","strawberry","watermelon"};
@@ -44,6 +48,14 @@ public class MainActivity extends AppCompatActivity {
         initView();
         initData();
         pager.setAdapter(adapter);
+        recommend=(Button)findViewById(R.id.recommend);
+        recommend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Music1Activity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initData() {

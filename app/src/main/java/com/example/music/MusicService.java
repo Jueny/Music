@@ -24,7 +24,7 @@ public class MusicService extends Service {
         //播放音乐
         public void musicPlay(int position){
             if(player==null){//刚开始播放
-                player=MediaPlayer.create(MusicService.this,R.raw.dream);
+                player=MediaPlayer.create(MusicService.this, R.raw.dream);
                 player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {

@@ -12,8 +12,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.music.ContentActivity;
+import com.example.music.Music;
 import com.example.music.R;
 
 import java.io.DataInputStream;
@@ -26,16 +28,20 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class ListFragment extends Fragment {
+    TextView title,content;
+    View view1;
     ListView list;
     List<String> data=new ArrayList<String>();
     ArrayAdapter<String> adapter;
     View view;
-
+/**/
+    private List<Music> musicList=new ArrayList<>();
     ////////////
     private String[] names={"content1.txt","content2.txt","content3.txt"};
     public ListFragment() {
         // Required empty public constructor
     }
+
 //    StringBuffer buffer=new StringBuffer();
 //    try{
 //        FileInputStream
@@ -51,6 +57,8 @@ public class ListFragment extends Fragment {
 //        list=(ListView)view.findViewById(R.id.);
         for (int i=1;i<20;i++){
             data.add("伶仃");
+            data.add("3333");
+            data.add("hhhhhh");
         }
         adapter=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,data);
     }
@@ -115,18 +123,6 @@ public class ListFragment extends Fragment {
 
 
 
-
-//    public static void readFileOnLine(String filePath){//输入文件路径
-//        FileInputStream fis = openF//打开文件输入流
-//        StringBuffer sBuffer = new StringBuffer();
-//        DataInputStream dataIO = new DataInputStream(fis);//读取文件数据流
-//        String strLine = null;
-//        while((strLine =  dataIO.readLine()) != null) {//通过readline按行读取
-//            sBuffer.append(strLine + "\n");//strLine就是一行的内容
-//        }
-//        dataIO.close();
-//        fis.close();
-//    }
 
 
 }

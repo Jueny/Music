@@ -43,8 +43,9 @@ public class MusicAdapter extends ArrayAdapter {
         *
         * */
         //获取要显示的列表项数据类对象
-        Music music= (Music) getItem(position);
+
         //获取要显示的列表项数据视图
+        final Map<String,Bitmap> map=new HashMap<>();
         View view;
         ViewHoder hoder=new ViewHoder();
         if(convertView==null){
@@ -58,11 +59,28 @@ public class MusicAdapter extends ArrayAdapter {
             view=convertView;
             hoder= (ViewHoder) view.getTag();
         }
-
+        Music music= (Music) getItem(position);
         //给各个控件设置要显示的内容
         hoder.musicName.setText(music.getMusicName());
         hoder.musicContent.setText(music.getMusicContent());
         hoder.musicImage.setImageResource(music.getImgId());
+//        final String url=music.getImgUrl();
+        //执行异步任务得到图片
+//        Bitmap bitmap=map.get(url);
+//        if(bitmap!=null){
+//            holder.newsImage.setImageBitmap(bitmap);
+//        }else{
+//            //final只能赋值一次
+//            final ViewHolder finalHolder = holder;
+//            new ImageTask(new ImageTask.CallBack() {
+//                @Override
+//                public void getData(Bitmap pic) {
+//                    finalHolder.newsImage.setImageBitmap(pic);
+//                    //放入缓存
+//                    map.put(url,pic);
+//                }
+//            }).execute("http://litchiapi.jstv.com"+url);
+//        }
         return view;
     }
 }

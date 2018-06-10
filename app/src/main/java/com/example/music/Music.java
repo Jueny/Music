@@ -8,6 +8,7 @@ public class Music {
     private String MusicName,MusicContent;
     private int imgId;
 
+    public Music(){}
     public Music(String musicName, String musicContent, int imgId) {
         MusicName = musicName;
         MusicContent = musicContent;
